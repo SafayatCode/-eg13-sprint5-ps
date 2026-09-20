@@ -8,10 +8,7 @@ function TreeNode(val, left, right) {
 }
 
 // 01. Remove Duplicates from Sorted Array
-/**
- * @param {number[]} nums
- * @return {number}
- */
+
 var removeDuplicates = function(nums) {
   if (nums.length === 0) return 0;
 
@@ -28,11 +25,7 @@ var removeDuplicates = function(nums) {
 };
 
 // 02. Binary Search
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
+
 var search = function(nums, target) {
   let lo = 0, hi = nums.length - 1;
 
@@ -48,11 +41,7 @@ var search = function(nums, target) {
 };
 
 // 03. Search Insert Position
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
+
 var searchInsert = function(nums, target) {
   let lo = 0, hi = nums.length - 1;
 
@@ -68,20 +57,14 @@ var searchInsert = function(nums, target) {
 };
 
 // 04. Maximum Depth of Binary Tree
-/**
- * @param {TreeNode} root
- * @return {number}
- */
+
 var maxDepth = function(root) {
   if (!root) return 0;
   return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 };
 
 // 05. Invert Binary Tree
-/**
- * @param {TreeNode} root
- * @return {TreeNode}
- */
+
 var invertTree = function(root) {
   if (!root) return null;
 
@@ -95,10 +78,7 @@ var invertTree = function(root) {
 };
 
 // 06. Product of Array Except Self
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
+
 var productExceptSelf = function(nums) {
   const n = nums.length;
   const result = new Array(n).fill(1);
@@ -119,11 +99,7 @@ var productExceptSelf = function(nums) {
 };
 
 // 07. Rotate Array
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {void}
- */
+
 var rotate = function(nums, k) {
   const n = nums.length;
   k = k % n;
@@ -144,18 +120,13 @@ var rotate = function(nums, k) {
 };
 
 // 08. Min Stack
-/**
- * @constructor
- */
+
 var MinStack = function() {
   this.stack = [];
   this.minStack = [];
 };
 
-/**
- * @param {number} val
- * @return {void}
- */
+
 MinStack.prototype.push = function(val) {
   this.stack.push(val);
 
@@ -189,11 +160,7 @@ MinStack.prototype.getMin = function() {
 };
 
 // 09. Continuous Subarray Sum
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {boolean}
- */
+
 var checkSubarraySum = function(nums, k) {
   const remainderIndex = new Map();
   remainderIndex.set(0, -1);
@@ -215,10 +182,7 @@ var checkSubarraySum = function(nums, k) {
 };
 
 // 10. Daily Temperatures
-/**
- * @param {number[]} temperatures
- * @return {number[]}
- */
+
 var dailyTemperatures = function(temperatures) {
   const result = new Array(temperatures.length).fill(0);
   const stack = []; // indices of days waiting for a warmer day
